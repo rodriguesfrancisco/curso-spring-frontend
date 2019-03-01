@@ -3,6 +3,7 @@ import { NavController, IonicPage } from 'ionic-angular';
 import { MenuController } from 'ionic-angular/components/app/menu-controller';
 import { CredenciaisDTO } from '../../models/credenciais.dto';
 import { AuthService } from '../../services/auth.service';
+import { SignupPage } from '../signup/signup';
 
 @IonicPage()
 @Component({
@@ -48,5 +49,9 @@ export class HomePage {
         this.navCtrl.setRoot('CategoriasPage');
       },
       error => {})
+  }
+
+  signup(){
+    this.navCtrl.push('SignupPage');
   }
 }
