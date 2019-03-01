@@ -86,3 +86,9 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+.getstart {    
+  background-repeat: no-repeat;
+  background-size: cover;  
+  background-image: url('../assets/imgs/letsstart.jpg');
+}
