@@ -46,7 +46,6 @@ export class SignupPage {
     this.estadoService.findAll()
       .subscribe(res => {
         this.estados = res;
-        console.log(this.estados);
         this.formGroup.controls.estadoId.setValue(this.estados[0].id);
         this.updateCidades();
       },
@@ -54,12 +53,10 @@ export class SignupPage {
   }
 
   updateCidades(){
-    console.log('Aqui');
     let estado_id = this.formGroup.value.estadoId;
     this.cidadeService.findAll(estado_id)
       .subscribe(res => {
         this.cidades = res;
-        console.log(this.cidades);
         this.formGroup.controls.cidadeId.setValue(null);
       },
       error => {});

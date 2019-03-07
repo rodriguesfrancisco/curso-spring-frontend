@@ -50,7 +50,6 @@ export class ProfilePage {
     this.clienteService.getImageFromBucket(this.cliente.id)
       .subscribe(res => {
         this.cliente.imageUrl = `${API_CONFIG.bucketBaseUrl}cp${this.cliente.id}.jpg`;
-        console.log(this.cliente.imageUrl);
       },
       error => {})
   }
